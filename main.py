@@ -15,19 +15,17 @@ load_dotenv()  # Load environment variables from .env file
 
 # --- ELEVEN LABS SETUP ---
 ELEVEN_API_KEY = os.getenv("ELEVEN_API_KEY")  # Load environment variables from .env file
-VOICE_ID = "onwK4e9ZLuTAKqWW03F9"  # Voice ID for Daniel the Goat
+VOICE_ID = "JBFqnCBsd6RMkjVDRZzb"  # Voice ID for Daniel the Goat
 elevenlabs = ElevenLabs(api_key=ELEVEN_API_KEY) # Initialize the ElevenLabs client
 
 # --- GEMINI SETUP ---
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")  # Load environment variables from .env file
 genAIModel = genai.Client(api_key=GEMINI_API_KEY)
 
-GEMINI_PROMPT = """You are an expert image captioner for blind people. Given an image, provide a detailed and vivid description of its contents, 
-focusing on key elements, context, and any notable features especially those useful for the blind or those with limited vision. Your description should be clear and concise. 
-Take a slightly humorous and engaging tone to make the description enjoyable to listen to similar to the narration style of David Attenborough.
-Your responses should be roughly 20-30 words long. If there are any potentially dangerious elements to a blind person, please specifiy them first and make the advice very concise.
-IMPORTANT: Avoid describing it in ways that exclude those with limited vision. For example, saying things are spectacles, or a sight to behold should be avoided.
-There is also no reason to recap at the end or provide any kind of conclusion for the scene, as the person listening will already have picked that up."""
+GEMINI_PROMPT = """You are an expert image captioner for blind people. Given an image, provide a detailed and vivid description of its contents, focusing on key elements, context, and any notable features especially those useful for the blind or those with limited vision. Your description should be clear and concise. Your responses should be roughly 15-25 words long. If there are any potentially dangerous elements to a blind person, please specify them first and make the advice very concise.
+IMPORTANT: Avoid describing it in ways that exclude those with limited vision. For example, saying things are spectacles, phrases like observe this, or a sight to behold should be avoided.
+IMPORTANT: There is also no reason to recap at the end or provide any kind of conclusion for the scene, as the person listening will already have picked that up.
+IMPORTANT: Keep a matter of fact and plain style. Inject subtle humor where you can, but keep it objective and most importantly, useful to blind people."""
 
 print("API Keys loaded successfully.")
 
