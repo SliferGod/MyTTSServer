@@ -15,7 +15,7 @@ load_dotenv()  # Load environment variables from .env file
 
 # --- ELEVEN LABS SETUP ---
 ELEVEN_API_KEY = os.getenv("ELEVEN_API_KEY")  # Load environment variables from .env file
-VOICE_ID = "JBFqnCBsd6RMkjVDRZzb"  # Voice ID for Daniel the Goat
+VOICE_ID = "XrExE9yKIg1WjnnlVkGX"  # Voice ID for Daniel the Goat
 elevenlabs = ElevenLabs(api_key=ELEVEN_API_KEY) # Initialize the ElevenLabs client
 
 # --- GEMINI SETUP ---
